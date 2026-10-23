@@ -1,0 +1,29 @@
+
+EXPERIMENT 1  seeds [14, 15, 16]  (3420 calls)  accuracy points, 95 percent interval
+cond                               k=0                     k=4                     k=8                    k=16
+true                                       33.3 [ 26.1,  40.6]     31.7 [ 25.0,  38.3]     36.7 [ 30.0,  43.9]
+flipped                                    25.0 [ 18.9,  31.7]     35.0 [ 27.8,  42.2]     25.0 [ 18.9,  31.7]
+random                                     23.9 [ 17.8,  30.6]     21.7 [ 16.1,  27.8]     36.7 [ 30.0,  43.9]
+none               19.4 [ 13.9,  25.0]     32.8 [ 26.1,  40.0]     34.4 [ 27.2,  41.7]     26.7 [ 20.6,  33.3]
+success_only                               70.6 [ 63.9,  77.2]     83.9 [ 78.3,  88.9]     81.7 [ 76.1,  87.2]
+failure_only                               21.1 [ 15.6,  27.2]     13.3 [  8.9,  18.3]      4.4 [  1.7,   7.8]
+ceiling (perfect label reader, true labels): k=0: 25.0  k=4: 50.0  k=8: 68.1  k=16: 95.8
+
+label following rate (answer is a route labeled 1 for its region; only where such a route exists)
+  true     k= 4   62.2 [ 48.9,  75.6]  (n=45)
+  true     k= 8   45.3 [ 34.7,  56.0]  (n=75)
+  true     k=16   53.3 [ 45.0,  62.5]  (n=120)
+  flipped  k= 4   66.7 [ 58.5,  74.1]  (n=135)
+  flipped  k= 8   50.9 [ 43.0,  58.8]  (n=165)
+  flipped  k=16   60.0 [ 52.7,  67.3]  (n=165)
+  random   k= 4   66.7 [ 55.0,  78.3]  (n=60)
+  random   k= 8   58.7 [ 46.7,  69.3]  (n=75)
+  random   k=16   74.4 [ 64.4,  83.3]  (n=90)
+
+unreadable replies: 0 of 3420
+true minus flipped, k=4:   8.3 [  2.2,  15.0] points  ->  P3 (partial)
+true minus flipped, k=8:  -3.3 [ -9.4,   2.8] points  ->  P2 (labels not used)
+true minus flipped, k=16:  11.7 [  5.6,  17.8] points  ->  P3 (partial)
+P4 check, k=8: success only 83.9 vs true labels 31.7
+
+calls 3420  input tokens 1315800  output tokens 9383  recorded spend $0.0000

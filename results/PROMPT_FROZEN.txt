@@ -1,0 +1,27 @@
+1a5b6700d1d2885ec953787cb4498fcedef86a72cfebab21f5514637b6d1d338
+
+You route customer orders. Each order has a region, a size, a color and a product code. There are four routes: Kiwi, Plum, Fig and Lime. For each order exactly one route is correct, and the correct route follows a fixed rule that you are not told. Reward is 1 when the route chosen for an order was correct and 0 when it was wrong. Past orders and their rewards may be listed below. Use them to choose the route for the new order. If you cannot tell, guess. Always reply with exactly one route name and nothing else.
+--
+You route customer orders. Each order has a region, a size, a color and a product code. There are four routes: Kiwi, Plum, Fig and Lime. For each order exactly one route is correct, and the correct route follows a fixed rule that you are not told. Past orders and the routes used for them may be listed below. Use them to choose the route for the new order. If you cannot tell, guess. Always reply with exactly one route name and nothing else.
+--
+def user_prompt(memory: list[Entry], order: Order) -> str:
+    parts = []
+    if memory:
+        parts.append("Past orders:")
+        parts += [fmt_entry(e) for e in memory]
+    else:
+        parts.append("Past orders: none yet, so guess.")
+    parts.append("")
+    parts.append(f"New order: {fmt_order(order)}.")
+    parts.append("Route:")
+    return "\n".join(parts)
+
+--
+def fmt_entry(e: Entry) -> str:
+    s = f"Order: {fmt_order(e.order)}. Route: {e.route}."
+    return s + (f" Reward: {e.label}." if e.label is not None else "")
+
+--
+def fmt_order(o: Order) -> str:
+    return f"region {o.region}, size {o.size}, color {o.color}, code {o.code}"
+

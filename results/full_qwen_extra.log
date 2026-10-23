@@ -1,0 +1,48 @@
+frozen prompt hash matches: 1a5b6700d1d2
+balance before: Current balance: 596.08 compute units
+[colab] Creating session 'qwen'...
+[colab] Session READY.
+  upload route_env: [colab] Uploaded 'route_env.py' to '/content/route_env.py'
+  upload qwen_route: [colab] Uploaded 'qwen_route.py' to '/content/qwen_route.py'
+torch 2.11.0+cu130 | transformers 5.20.1 | gpu Tesla T4
+=== qwen smoke
+  
+started: qwen_smoke
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_auth.py:138: UserWarning: 
+Error while fetching `HF_TOKEN` secret value from your vault: 'Requesting secret HF_TOKEN timed out. Secrets can only be fetched when running from the Colab UI.'.
+  warnings.warn(f"\nError while fetching `HF_TOKEN` secret value from your vault: '{str(e)}'.")
+smoke replies: ['Fig', 'Lime', 'Fig', 'Fig', 'Fig', 'Plum', 'Lime', 'Plum'] | parsed: ['Fig', 'Lime', 'Fig', 'Fig', 'Fig', 'Plum', 'Lime', 'Plum'] | mean prompt tokens 381.0 | seconds 110.5
+peak GPU GB 8.81
+  finished in 121 s
+=== qwen extra seeds 14 to 16
+  
+started: qwen_extra_seeds_14_to_16
+exp1: 3420 calls to make
+exp1 160/3420  17 s
+exp1 320/3420  35 s
+exp1 480/3420  58 s
+exp1 640/3420  85 s
+exp1 800/3420  118 s
+exp1 960/3420  167 s
+exp1 1120/3420  212 s
+exp1 1280/3420  237 s
+exp1 1440/3420  259 s
+exp1 1600/3420  283 s
+exp1 1760/3420  313 s
+exp1 1920/3420  341 s
+exp1 2080/3420  392 s
+exp1 2240/3420  438 s
+exp1 2400/3420  466 s
+exp1 2560/3420  488 s
+exp1 2720/3420  511 s
+exp1 2880/3420  541 s
+exp1 3040/3420  569 s
+alive
+exp1 3200/3420  618 s
+exp1 3360/3420  663 s
+exp1 3420/3420  682 s
+  finished in 691 s
+  [colab] Downloaded '/content/out/exp1_extra.jsonl' to 'results/full/qwen3-4b-instruct-2507/exp1_extra.jsonl'
+[colab] Session terminated.
+sessions: [colab] No active sessions found on server.
+balance after: Current balance: 595.87 compute units

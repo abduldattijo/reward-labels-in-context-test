@@ -1,0 +1,38 @@
+
+EXPERIMENT 1  (3420 calls)  accuracy points, 95 percent interval
+cond                               k=0                     k=4                     k=8                    k=16
+true                                       29.4 [ 22.8,  36.1]     33.9 [ 26.7,  40.6]     44.4 [ 37.2,  51.7]
+flipped                                     5.6 [  2.2,   8.9]      9.4 [  5.6,  13.9]     22.2 [ 16.1,  28.3]
+random                                     28.3 [ 21.7,  35.0]     24.4 [ 18.3,  31.1]     23.9 [ 17.8,  30.6]
+none               23.9 [ 17.8,  30.6]     21.7 [ 16.1,  27.8]     26.1 [ 19.4,  32.2]     24.4 [ 18.3,  31.1]
+success_only                               77.8 [ 71.7,  83.9]     96.7 [ 93.9,  98.9]    100.0 [100.0, 100.0]
+failure_only                               31.1 [ 24.4,  37.8]     28.9 [ 22.2,  35.6]     22.8 [ 16.7,  28.9]
+ceiling (perfect label reader, true labels): k=0: 25.0  k=4: 50.0  k=8: 59.7  k=16: 91.7
+
+label following rate (answer is a route labeled 1 for its region; only where such a route exists)
+  true     k= 4   97.8 [ 93.3, 100.0]  (n=45)
+  true     k= 8   84.4 [ 73.3,  93.3]  (n=45)
+  true     k=16   54.1 [ 45.9,  62.2]  (n=135)
+  flipped  k= 4   88.1 [ 82.2,  93.3]  (n=135)
+  flipped  k= 8   82.2 [ 76.7,  87.2]  (n=180)
+  flipped  k=16   77.2 [ 71.1,  83.3]  (n=180)
+  random   k= 4   90.0 [ 76.7, 100.0]  (n=30)
+  random   k= 8   82.2 [ 74.4,  90.0]  (n=90)
+  random   k=16   63.8 [ 54.3,  73.3]  (n=105)
+
+unreadable replies: 0 of 3420
+true minus flipped, k=4:  23.9 [ 17.2,  31.1] points  ->  P1 (labels are used)
+true minus flipped, k=8:  24.4 [ 17.2,  31.7] points  ->  P1 (labels are used)
+true minus flipped, k=16:  22.2 [ 15.0,  29.4] points  ->  P1 (labels are used)
+P4 check, k=8: success only 96.7 vs true labels 33.9
+
+EXPERIMENT 2  (2880 calls)  accuracy points by block of 6 trials, 95 percent interval over runs
+cond                      trials 1-6             trials 7-12            trials 13-18            trials 19-24
+true             21.1 [ 15.0,  27.8]     32.2 [ 23.9,  40.6]     29.4 [ 23.3,  36.1]     37.2 [ 29.4,  45.0]   runs 30
+flipped          24.4 [ 19.4,  29.4]     23.9 [ 17.8,  30.6]     23.9 [ 19.4,  28.3]     25.0 [ 18.9,  31.1]   runs 30
+random           20.0 [ 13.3,  26.7]     25.6 [ 18.3,  33.9]     27.8 [ 20.0,  35.0]     19.4 [ 11.7,  28.3]   runs 30
+none             22.2 [ 16.1,  28.9]     22.8 [ 15.6,  30.0]     22.8 [ 15.6,  30.6]     28.9 [ 21.7,  36.7]   runs 30
+true minus flipped, last block, paired by hidden rule:  12.2 [  1.1,  23.9] points
+unreadable replies: 0 of 2880
+
+calls 6300  input tokens 3441319  output tokens 35584  recorded spend $0.3619

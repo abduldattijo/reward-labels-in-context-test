@@ -1,0 +1,128 @@
+SEED LEVEL true minus flipped (points). Each value is one seed, 60 test orders.
+claude-haiku-5-5         k= 4 mean   23.9  seed bootstrap [  21.7,   28.3]  mean +- 2 se [  19.4,   28.3]  all positive: True  values: [22, 28, 22]
+claude-haiku-5-5         k= 8 mean   24.4  seed bootstrap [  21.7,   26.7]  mean +- 2 se [  21.5,   27.4]  all positive: True  values: [22, 27, 25]
+claude-haiku-5-5         k=16 mean   22.2  seed bootstrap [   8.3,   38.3]  mean +- 2 se [   4.8,   39.7]  all positive: True  values: [8, 20, 38]
+gpt-6-sol                k= 8 mean   41.1  seed bootstrap [  33.3,   48.3]  mean +- 2 se [  32.4,   49.8]  all positive: True  values: [33, 48, 42]
+qwen3-4b (seeds 11-13)   k= 4 mean   -2.2  seed bootstrap [  -8.3,    1.7]  mean +- 2 se [  -8.4,    4.0]  all positive: False  values: [2, -8, 0]
+qwen3-4b (seeds 11-13)   k= 8 mean    9.4  seed bootstrap [   3.3,   16.7]  mean +- 2 se [   1.7,   17.2]  all positive: True  values: [8, 17, 3]
+qwen3-4b (seeds 11-13)   k=16 mean    8.9  seed bootstrap [   8.3,   10.0]  mean +- 2 se [   7.8,   10.0]  all positive: True  values: [8, 8, 10]
+qwen3-4b (seeds 11-16)   k= 4 mean    3.1  seed bootstrap [  -3.1,   10.3]  mean +- 2 se [  -4.5,   10.6]  all positive: False  values: [2, -8, 0, -2, 18, 8]
+qwen3-4b (seeds 11-16)   k= 8 mean    3.1  seed bootstrap [  -3.3,    9.4]  mean +- 2 se [  -4.3,   10.4]  all positive: False  values: [8, 17, 3, -8, -5, 3]
+qwen3-4b (seeds 11-16)   k=16 mean   10.3  seed bootstrap [   8.9,   12.2]  mean +- 2 se [   8.3,   12.3]  all positive: True  values: [8, 8, 10, 15, 10, 10]
+
+ROUTE REUSE. reuse = answer is a route shown in memory for that region. chance = share expected from a uniform random answer.
+model                    cond            k   reuse  chance  answers a route labeled 0  (chance)
+claude-haiku-5-5         true            4   32.8    25.0                       11.1      25.0
+claude-haiku-5-5         flipped         4   67.8    25.0                        6.7      25.0
+claude-haiku-5-5         random          4   20.6    25.0                        6.7      25.0
+claude-haiku-5-5         none            4   77.8    25.0                        n/a       n/a
+claude-haiku-5-5         success_only    4   77.8    25.0                        n/a       n/a
+claude-haiku-5-5         failure_only    4    5.0    25.0                        5.0      25.0
+claude-haiku-5-5         true            8   55.0    45.8                       33.9      39.6
+claude-haiku-5-5         flipped         8   84.4    45.8                        8.9      25.0
+claude-haiku-5-5         random          8   62.2    45.8                       21.1      33.3
+claude-haiku-5-5         none            8   76.1    45.8                        n/a       n/a
+claude-haiku-5-5         success_only    8   96.7    25.0                        n/a       n/a
+claude-haiku-5-5         failure_only    8    4.4    37.5                        4.4      37.5
+claude-haiku-5-5         true           16   88.9    68.8                       48.3      50.0
+claude-haiku-5-5         flipped        16   99.4    68.8                       29.6      25.0
+claude-haiku-5-5         random         16   80.6    68.8                       64.4      56.2
+claude-haiku-5-5         none           16   97.2    68.8                        n/a       n/a
+claude-haiku-5-5         success_only   16  100.0    25.0                        n/a       n/a
+claude-haiku-5-5         failure_only   16   38.3    54.2                       38.3      54.2
+gpt-6-sol                true            8   28.9    45.8                        5.6      39.6
+gpt-6-sol                flipped         8   65.0    45.8                        0.0      25.0
+gpt-6-sol                random          8   47.8    45.8                        8.9      33.3
+gpt-6-sol                none            8   58.9    45.8                        n/a       n/a
+gpt-6-sol                success_only    8  100.0    25.0                        n/a       n/a
+gpt-6-sol                failure_only    8    1.1    37.5                        1.1      37.5
+qwen3-4b (seeds 11-13)   true            4   43.3    25.0                       31.9      25.0
+qwen3-4b (seeds 11-13)   flipped         4   63.9    25.0                       71.1      25.0
+qwen3-4b (seeds 11-13)   random          4   51.1    25.0                       48.7      25.0
+qwen3-4b (seeds 11-13)   none            4   55.0    25.0                        n/a       n/a
+qwen3-4b (seeds 11-13)   success_only    4   70.0    25.0                        n/a       n/a
+qwen3-4b (seeds 11-13)   failure_only    4   40.6    25.0                       40.6      25.0
+qwen3-4b (seeds 11-13)   true            8   71.7    45.8                       52.2      39.6
+qwen3-4b (seeds 11-13)   flipped         8   78.9    45.8                       42.2      25.0
+qwen3-4b (seeds 11-13)   random          8   71.7    45.8                       45.0      33.3
+qwen3-4b (seeds 11-13)   none            8   75.6    45.8                        n/a       n/a
+qwen3-4b (seeds 11-13)   success_only    8   69.4    25.0                        n/a       n/a
+qwen3-4b (seeds 11-13)   failure_only    8   50.6    37.5                       50.6      37.5
+qwen3-4b (seeds 11-13)   true           16   84.4    68.8                       51.1      50.0
+qwen3-4b (seeds 11-13)   flipped        16   96.7    68.8                       32.6      25.0
+qwen3-4b (seeds 11-13)   random         16   92.2    68.8                       80.6      56.2
+qwen3-4b (seeds 11-13)   none           16   87.2    68.8                        n/a       n/a
+qwen3-4b (seeds 11-13)   success_only   16   86.1    25.0                        n/a       n/a
+qwen3-4b (seeds 11-13)   failure_only   16   81.1    54.2                       81.1      54.2
+qwen3-4b (seeds 11-16)   true            4   48.6    25.0                       41.5      25.0
+qwen3-4b (seeds 11-16)   flipped         4   61.4    25.0                       53.3      25.0
+qwen3-4b (seeds 11-16)   random          4   46.7    25.0                       40.4      25.0
+qwen3-4b (seeds 11-16)   none            4   55.0    25.0                        n/a       n/a
+qwen3-4b (seeds 11-16)   success_only    4   70.3    25.0                        n/a       n/a
+qwen3-4b (seeds 11-16)   failure_only    4   36.1    25.0                       36.1      25.0
+qwen3-4b (seeds 11-16)   true            8   66.7    44.8                       49.6      38.0
+qwen3-4b (seeds 11-16)   flipped         8   74.4    44.8                       50.8      25.0
+qwen3-4b (seeds 11-16)   random          8   64.4    44.8                       41.7      34.4
+qwen3-4b (seeds 11-16)   none            8   76.4    44.8                        n/a       n/a
+qwen3-4b (seeds 11-16)   success_only    8   76.7    25.0                        n/a       n/a
+qwen3-4b (seeds 11-16)   failure_only    8   57.2    38.5                       57.2      38.5
+qwen3-4b (seeds 11-16)   true           16   86.9    66.7                       54.8      51.1
+qwen3-4b (seeds 11-16)   flipped        16   87.2    66.7                       33.3      25.0
+qwen3-4b (seeds 11-16)   random         16   88.6    66.7                       71.4      56.2
+qwen3-4b (seeds 11-16)   none           16   83.3    66.7                        n/a       n/a
+qwen3-4b (seeds 11-16)   success_only   16   83.9    25.0                        n/a       n/a
+qwen3-4b (seeds 11-16)   failure_only   16   85.3    54.2                       85.3      54.2
+
+
+SECOND BASELINE: the model's own saved no-memory answer to the same order, checked against the shown routes
+model                    cond            k   reuse  uniform  own no-memory baseline
+claude-haiku-5-5         true            8    55.0     45.8                    35.0
+claude-haiku-5-5         flipped         8    84.4     45.8                    35.0
+claude-haiku-5-5         random          8    62.2     45.8                    35.0
+claude-haiku-5-5         none            8    76.1     45.8                    35.0
+claude-haiku-5-5         success_only    8    96.7     25.0                    23.9
+claude-haiku-5-5         failure_only    8     4.4     37.5                    32.8
+gpt-6-sol                true            8    28.9     45.8                    33.3
+gpt-6-sol                flipped         8    65.0     45.8                    33.3
+gpt-6-sol                random          8    47.8     45.8                    33.3
+gpt-6-sol                none            8    58.9     45.8                    33.3
+gpt-6-sol                success_only    8   100.0     25.0                    24.4
+gpt-6-sol                failure_only    8     1.1     37.5                    34.4
+qwen3-4b (seeds 11-13)   true            8    71.7     45.8                    49.4
+qwen3-4b (seeds 11-13)   flipped         8    78.9     45.8                    49.4
+qwen3-4b (seeds 11-13)   random          8    71.7     45.8                    49.4
+qwen3-4b (seeds 11-13)   none            8    75.6     45.8                    49.4
+qwen3-4b (seeds 11-13)   success_only    8    69.4     25.0                    35.6
+qwen3-4b (seeds 11-13)   failure_only    8    50.6     37.5                    38.3
+qwen3-4b (seeds 11-16)   true            8    66.7     44.8                    48.6
+qwen3-4b (seeds 11-16)   flipped         8    74.4     44.8                    48.6
+qwen3-4b (seeds 11-16)   random          8    64.4     44.8                    48.6
+qwen3-4b (seeds 11-16)   none            8    76.4     44.8                    48.6
+qwen3-4b (seeds 11-16)   success_only    8    76.7     25.0                    27.5
+qwen3-4b (seeds 11-16)   failure_only    8    57.2     38.5                    46.9
+
+ELIMINATION POLICY, failures only memory: drop every shown (wrong) route for the region, guess uniformly among the rest
+claude-haiku-5-5         k= 4 policy  33.3   model  31.1
+claude-haiku-5-5         k= 8 policy  41.7   model  28.9
+claude-haiku-5-5         k=16 policy  61.1   model  22.8
+gpt-6-sol                k= 8 policy  41.7   model  23.9
+qwen3-4b (seeds 11-13)   k= 4 policy  33.3   model  16.7
+qwen3-4b (seeds 11-13)   k= 8 policy  41.7   model  21.1
+qwen3-4b (seeds 11-13)   k=16 policy  61.1   model   7.8
+qwen3-4b (seeds 11-16)   k= 4 policy  33.3   model  18.9
+qwen3-4b (seeds 11-16)   k= 8 policy  42.4   model  17.2
+qwen3-4b (seeds 11-16)   k=16 policy  61.1   model   6.1
+
+AVOIDING ROUTES LABELED 0: failures only memory against mixed memory (true labels). Share of answers that are a route labeled 0, against the uniform share
+claude-haiku-5-5         k= 4   failure_only   5.0 vs  25.0 uniform (n=180)   true          11.1 vs  25.0 uniform (n=135)
+claude-haiku-5-5         k= 8   failure_only   4.4 vs  37.5 uniform (n=180)   true          33.9 vs  39.6 uniform (n=180)
+claude-haiku-5-5         k=16   failure_only  38.3 vs  54.2 uniform (n=180)   true          48.3 vs  50.0 uniform (n=180)
+gpt-6-sol                k= 4
+gpt-6-sol                k= 8   failure_only   1.1 vs  37.5 uniform (n=180)   true           5.6 vs  39.6 uniform (n=180)
+gpt-6-sol                k=16
+qwen3-4b (seeds 11-13)   k= 4   failure_only  40.6 vs  25.0 uniform (n=180)   true          31.9 vs  25.0 uniform (n=135)
+qwen3-4b (seeds 11-13)   k= 8   failure_only  50.6 vs  37.5 uniform (n=180)   true          52.2 vs  39.6 uniform (n=180)
+qwen3-4b (seeds 11-13)   k=16   failure_only  81.1 vs  54.2 uniform (n=180)   true          51.1 vs  50.0 uniform (n=180)
+qwen3-4b (seeds 11-16)   k= 4   failure_only  36.1 vs  25.0 uniform (n=360)   true          41.5 vs  25.0 uniform (n=270)
+qwen3-4b (seeds 11-16)   k= 8   failure_only  57.2 vs  38.5 uniform (n=360)   true          49.6 vs  38.0 uniform (n=345)
+qwen3-4b (seeds 11-16)   k=16   failure_only  85.3 vs  54.2 uniform (n=360)   true          54.8 vs  51.1 uniform (n=345)

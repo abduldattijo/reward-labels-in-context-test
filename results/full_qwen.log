@@ -1,0 +1,78 @@
+frozen prompt hash matches: 1a5b6700d1d2
+balance before: Current balance: 596.52 compute units
+[colab] Creating session 'qwen'...
+[colab] Session READY.
+  upload route_env: [colab] Uploaded 'route_env.py' to '/content/route_env.py'
+  upload qwen_route: [colab] Uploaded 'qwen_route.py' to '/content/qwen_route.py'
+torch 2.11.0+cu130 | transformers 5.20.1 | gpu Tesla T4
+=== qwen smoke
+  
+started: qwen_smoke
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_auth.py:138: UserWarning: 
+Error while fetching `HF_TOKEN` secret value from your vault: 'Requesting secret HF_TOKEN timed out. Secrets can only be fetched when running from the Colab UI.'.
+  warnings.warn(f"\nError while fetching `HF_TOKEN` secret value from your vault: '{str(e)}'.")
+smoke replies: ['Fig', 'Lime', 'Fig', 'Fig', 'Fig', 'Plum', 'Lime', 'Plum'] | parsed: ['Fig', 'Lime', 'Fig', 'Fig', 'Fig', 'Plum', 'Lime', 'Plum'] | mean prompt tokens 381.0 | seconds 139.3
+peak GPU GB 8.81
+  finished in 157 s
+=== qwen experiment 1
+  
+started: qwen_experiment_1
+exp1: 3420 calls to make
+exp1 160/3420  17 s
+exp1 320/3420  36 s
+exp1 480/3420  60 s
+exp1 640/3420  89 s
+exp1 800/3420  119 s
+exp1 960/3420  166 s
+exp1 1120/3420  208 s
+exp1 1280/3420  231 s
+exp1 1440/3420  252 s
+exp1 1600/3420  275 s
+exp1 1760/3420  304 s
+exp1 1920/3420  331 s
+exp1 2080/3420  377 s
+exp1 2240/3420  420 s
+exp1 2400/3420  446 s
+exp1 2560/3420  467 s
+exp1 2720/3420  489 s
+exp1 2880/3420  518 s
+exp1 3040/3420  544 s
+alive
+exp1 3200/3420  589 s
+exp1 3360/3420  631 s
+exp1 3420/3420  649 s
+  finished in 657 s
+  [colab] Downloaded '/content/out/exp1.jsonl' to 'results/full/qwen3-4b-instruct-2507/exp1.jsonl'
+=== qwen experiment 2
+  started: qwen_experiment_2
+exp2: 120 runs
+exp2 trial 1/24  10 s
+exp2 trial 2/24  22 s
+exp2 trial 3/24  35 s
+exp2 trial 4/24  50 s
+exp2 trial 5/24  66 s
+exp2 trial 6/24  83 s
+exp2 trial 7/24  102 s
+exp2 trial 8/24  123 s
+exp2 trial 9/24  145 s
+exp2 trial 10/24  169 s
+exp2 trial 11/24  194 s
+exp2 trial 12/24  221 s
+exp2 trial 13/24  251 s
+exp2 trial 14/24  281 s
+exp2 trial 15/24  314 s
+exp2 trial 16/24  348 s
+exp2 trial 17/24  384 s
+exp2 trial 18/24  421 s
+exp2 trial 19/24  461 s
+exp2 trial 20/24  503 s
+exp2 trial 21/24  548 s
+alive
+exp2 trial 22/24  594 s
+exp2 trial 23/24  642 s
+exp2 trial 24/24  693 s
+  finished in 731 s
+  [colab] Downloaded '/content/out/exp2.jsonl' to 'results/full/qwen3-4b-instruct-2507/exp2.jsonl'
+[colab] Session terminated.
+sessions: [colab] No active sessions found on server.
+balance after: Current balance: 596.08 compute units
